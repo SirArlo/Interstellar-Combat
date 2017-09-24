@@ -2,7 +2,8 @@
 #define PLAYERSHIP_H
 
 #include <SFML/Graphics.hpp>
-
+#include <vector>
+using namespace std;
 
 class Playership
 {
@@ -15,8 +16,11 @@ public:
     void DrawPlayer(sf::RenderWindow &window);
 	float GetLastPositionX();
 	float GetLastPositionY();
+	void Playershoot();
 
 private:
+
+    int _DistToCentre;
    friend class CollisionHandler;
 	int _ScreenHeight;
      int _ScreenWidth;
@@ -25,6 +29,8 @@ private:
 	const int PlayerRadius = 280;
 	int Coordinate_x;
 	int Coordinate_y;
+	int _CentreScreenX;
+    int _CentreScreenY;
 	
 };
 

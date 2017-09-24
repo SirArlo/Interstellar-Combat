@@ -1,5 +1,6 @@
 #include "Playership.h"
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -51,3 +52,5 @@ float Playership::GetLastPositionY(){
     return PlayerCraft.getPosition().y;
 	
 }
+	
+

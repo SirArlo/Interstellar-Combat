@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/Enemy.cpp$(ObjectSuffix) $(IntermediateDirectory)/Playership.cpp$(ObjectSuffix) $(IntermediateDirectory)/Project_Main.cpp$(ObjectSuffix) $(IntermediateDirectory)/ScreenRender.cpp$(ObjectSuffix) $(IntermediateDirectory)/Asteroid.cpp$(ObjectSuffix) $(IntermediateDirectory)/CollisionHandler.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/Asteroid.cpp$(ObjectSuffix) $(IntermediateDirectory)/CollisionHandler.cpp$(ObjectSuffix) $(IntermediateDirectory)/Enemy.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerMovement.cpp$(ObjectSuffix) $(IntermediateDirectory)/Playership.cpp$(ObjectSuffix) $(IntermediateDirectory)/Project_Main.cpp$(ObjectSuffix) $(IntermediateDirectory)/ScreenRender.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBullet.cpp$(ObjectSuffix) 
 
 
 
@@ -93,6 +93,22 @@ PreBuild:
 ##
 ## Objects
 ##
+$(IntermediateDirectory)/Asteroid.cpp$(ObjectSuffix): Asteroid.cpp $(IntermediateDirectory)/Asteroid.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/eards/Desktop/SoftwareLabTwo/POJ/Asteroid.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Asteroid.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Asteroid.cpp$(DependSuffix): Asteroid.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Asteroid.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Asteroid.cpp$(DependSuffix) -MM Asteroid.cpp
+
+$(IntermediateDirectory)/Asteroid.cpp$(PreprocessSuffix): Asteroid.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Asteroid.cpp$(PreprocessSuffix) Asteroid.cpp
+
+$(IntermediateDirectory)/CollisionHandler.cpp$(ObjectSuffix): CollisionHandler.cpp $(IntermediateDirectory)/CollisionHandler.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/eards/Desktop/SoftwareLabTwo/POJ/CollisionHandler.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/CollisionHandler.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/CollisionHandler.cpp$(DependSuffix): CollisionHandler.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/CollisionHandler.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/CollisionHandler.cpp$(DependSuffix) -MM CollisionHandler.cpp
+
+$(IntermediateDirectory)/CollisionHandler.cpp$(PreprocessSuffix): CollisionHandler.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/CollisionHandler.cpp$(PreprocessSuffix) CollisionHandler.cpp
+
 $(IntermediateDirectory)/Enemy.cpp$(ObjectSuffix): Enemy.cpp $(IntermediateDirectory)/Enemy.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/eards/Desktop/SoftwareLabTwo/POJ/Enemy.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Enemy.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Enemy.cpp$(DependSuffix): Enemy.cpp
@@ -100,6 +116,14 @@ $(IntermediateDirectory)/Enemy.cpp$(DependSuffix): Enemy.cpp
 
 $(IntermediateDirectory)/Enemy.cpp$(PreprocessSuffix): Enemy.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Enemy.cpp$(PreprocessSuffix) Enemy.cpp
+
+$(IntermediateDirectory)/PlayerMovement.cpp$(ObjectSuffix): PlayerMovement.cpp $(IntermediateDirectory)/PlayerMovement.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/eards/Desktop/SoftwareLabTwo/POJ/PlayerMovement.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/PlayerMovement.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/PlayerMovement.cpp$(DependSuffix): PlayerMovement.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/PlayerMovement.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/PlayerMovement.cpp$(DependSuffix) -MM PlayerMovement.cpp
+
+$(IntermediateDirectory)/PlayerMovement.cpp$(PreprocessSuffix): PlayerMovement.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/PlayerMovement.cpp$(PreprocessSuffix) PlayerMovement.cpp
 
 $(IntermediateDirectory)/Playership.cpp$(ObjectSuffix): Playership.cpp $(IntermediateDirectory)/Playership.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/eards/Desktop/SoftwareLabTwo/POJ/Playership.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Playership.cpp$(ObjectSuffix) $(IncludePath)
@@ -125,21 +149,21 @@ $(IntermediateDirectory)/ScreenRender.cpp$(DependSuffix): ScreenRender.cpp
 $(IntermediateDirectory)/ScreenRender.cpp$(PreprocessSuffix): ScreenRender.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/ScreenRender.cpp$(PreprocessSuffix) ScreenRender.cpp
 
-$(IntermediateDirectory)/Asteroid.cpp$(ObjectSuffix): Asteroid.cpp $(IntermediateDirectory)/Asteroid.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/eards/Desktop/SoftwareLabTwo/POJ/Asteroid.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Asteroid.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Asteroid.cpp$(DependSuffix): Asteroid.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Asteroid.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Asteroid.cpp$(DependSuffix) -MM Asteroid.cpp
+$(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix): PlayerBullet.cpp $(IntermediateDirectory)/PlayerBullet.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/eards/Desktop/SoftwareLabTwo/POJ/PlayerBullet.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/PlayerBullet.cpp$(DependSuffix): PlayerBullet.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/PlayerBullet.cpp$(DependSuffix) -MM PlayerBullet.cpp
 
-$(IntermediateDirectory)/Asteroid.cpp$(PreprocessSuffix): Asteroid.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Asteroid.cpp$(PreprocessSuffix) Asteroid.cpp
+$(IntermediateDirectory)/PlayerBullet.cpp$(PreprocessSuffix): PlayerBullet.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/PlayerBullet.cpp$(PreprocessSuffix) PlayerBullet.cpp
 
-$(IntermediateDirectory)/CollisionHandler.cpp$(ObjectSuffix): CollisionHandler.cpp $(IntermediateDirectory)/CollisionHandler.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/eards/Desktop/SoftwareLabTwo/POJ/CollisionHandler.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/CollisionHandler.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/CollisionHandler.cpp$(DependSuffix): CollisionHandler.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/CollisionHandler.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/CollisionHandler.cpp$(DependSuffix) -MM CollisionHandler.cpp
+$(IntermediateDirectory)/EnemyBullet.cpp$(ObjectSuffix): EnemyBullet.cpp $(IntermediateDirectory)/EnemyBullet.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/eards/Desktop/SoftwareLabTwo/POJ/EnemyBullet.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/EnemyBullet.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/EnemyBullet.cpp$(DependSuffix): EnemyBullet.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/EnemyBullet.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/EnemyBullet.cpp$(DependSuffix) -MM EnemyBullet.cpp
 
-$(IntermediateDirectory)/CollisionHandler.cpp$(PreprocessSuffix): CollisionHandler.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/CollisionHandler.cpp$(PreprocessSuffix) CollisionHandler.cpp
+$(IntermediateDirectory)/EnemyBullet.cpp$(PreprocessSuffix): EnemyBullet.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/EnemyBullet.cpp$(PreprocessSuffix) EnemyBullet.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

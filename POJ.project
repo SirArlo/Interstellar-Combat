@@ -107,16 +107,23 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="POJ">
+    <File Name="Asteroid.cpp"/>
+    <File Name="Asteroid.h"/>
+    <File Name="CollisionHandler.cpp"/>
+    <File Name="CollisionHandler.h"/>
     <File Name="Enemy.cpp"/>
     <File Name="Enemy.h"/>
+    <File Name="main.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerMovement.cpp"/>
+    <File Name="PlayerMovement.h"/>
     <File Name="Playership.cpp"/>
     <File Name="Playership.h"/>
     <File Name="Project_Main.cpp"/>
-    <File Name="ScreenRender.h"/>
     <File Name="ScreenRender.cpp"/>
-    <File Name="Asteroid.h"/>
-    <File Name="Asteroid.cpp"/>
-    <File Name="CollisionHandler.h"/>
-    <File Name="CollisionHandler.cpp"/>
+    <File Name="ScreenRender.h"/>
+    <File Name="PlayerBullet.cpp"/>
+    <File Name="PlayerBullet.h"/>
+    <File Name="EnemyBullet.h"/>
+    <File Name="EnemyBullet.cpp"/>
   </VirtualDirectory>
 </CodeLite_Project>

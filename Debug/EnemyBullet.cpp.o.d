@@ -1,4 +1,4 @@
-Debug/Project_Main.cpp.o: Project_Main.cpp \
+Debug/EnemyBullet.cpp.o: EnemyBullet.cpp EnemyBullet.h \
  C:\Users\eards\Desktop\sfml\include/SFML/Graphics.hpp \
  C:\Users\eards\Desktop\sfml\include/SFML/Window.hpp \
  C:\Users\eards\Desktop\sfml\include/SFML/System.hpp \
@@ -67,9 +67,10 @@ Debug/Project_Main.cpp.o: Project_Main.cpp \
  C:\Users\eards\Desktop\sfml\include/SFML/Graphics/RenderWindow.hpp \
  C:\Users\eards\Desktop\sfml\include/SFML/Graphics/Shader.hpp \
  C:\Users\eards\Desktop\sfml\include/SFML/Graphics/Sprite.hpp \
- C:\Users\eards\Desktop\sfml\include/SFML/Graphics/Text.hpp Enemy.h \
- Playership.h ScreenRender.h Asteroid.h CollisionHandler.h PlayerBullet.h \
- EnemyBullet.h
+ C:\Users\eards\Desktop\sfml\include/SFML/Graphics/Text.hpp Playership.h \
+ Enemy.h
+
+EnemyBullet.h:
 
 C:\Users\eards\Desktop\sfml\include/SFML/Graphics.hpp:
 
@@ -209,16 +210,6 @@ C:\Users\eards\Desktop\sfml\include/SFML/Graphics/Sprite.hpp:
 
 C:\Users\eards\Desktop\sfml\include/SFML/Graphics/Text.hpp:
 
-Enemy.h:
-
 Playership.h:
 
-ScreenRender.h:
-
-Asteroid.h:
-
-CollisionHandler.h:
-
-PlayerBullet.h:
-
-EnemyBullet.h:
+Enemy.h:

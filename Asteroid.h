@@ -18,7 +18,8 @@ public:
 	
 private:
 
-	sf::CircleShape AsteroidObj;
+	sf::Sprite AsteroidObj;
+	sf::Texture AsteroidTexture;
 	float Coordinate_x;
 	float Coordinate_y;
 	unsigned int _ScreenWidth;
